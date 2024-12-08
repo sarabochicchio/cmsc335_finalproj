@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="/public/css/style.css"  type="text/css">
+	<title>Request</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            background-position: center;
+           font-family:Verdana, Geneva, Tahoma, sans-serif ;
+           
+        }
+    
+        #words { 
+            border-width: 10px; 
+            background-color: white;
+            border-color: rgb(249, 114, 136);
+            border-style:ridge;
+            padding: 30px; 
+            margin-left:330px; 
+            width: 50%;
+            font-family:fantasy;
+            font-weight:bold;
+            font-size:20px;
+        }
+        #submit-button, #reset-button{
+            background-color: rgb(249, 114, 136);
+            font-size:15px;
+            border-radius: 10px;
+            padding:10px;
+        }
+    </style> 
+    <h1>Submit your joke request below!</h1>
+    <div id ="words">
+    <h3>Note: If you select a category other than random, we will give you a default number of jokes</h3>
+    <form  action="http://localhost:<%= port %>/jokesSubmit" method="post"> 
+        <p>
+            <label for="name"><u>Your Name</u></label>
+            <input id="name" type="text" name="name" required >
+        </p>
+        <p><label for="type"><u>Type of Joke</u></label>
+            <select id="type" name="type" onchange="disableNumber()">
+                <option value="random">Random</option>
+                <option value="general">General</option>
+                <option value="knock-knock">Knock-Knock</option>
+                <option value="programming">Programming</option>
+                <option value="dad">Dad</option>
+            </select></p>
+            <p>
+                <label for="number"><u>How Many Jokes</u></label>
+                <input id="number" type="text" name="numberJokes" >
+            </p>
+       <br><br>
+        <input id="submit-button" type="submit" value="Submit Order">
+        <input id="reset-button" type="reset" value="Clear">
+    </form>
+</div>
+    <hr>
+    <a href = "/">HOME</a>
+    <script>
+        function disableNumber() {
+            let type = document.getElementById("type").value;
+            let num = document.getElementById("number");
+            if (type === "random") {
+                num.disabled = false;
+            } else {
+                num.disabled = true;
+                num.value = "Default number";
+                num.required = true;
+            }
+        }
+    </script>
+</body>
+
+</html>

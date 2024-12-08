@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Remove All</title>
+</head>
+
+<body>
+    <style>
+       body {
+            background-color: pink;
+            text-align: center;
+            background-position: center;
+           font-family:Verdana, Geneva, Tahoma, sans-serif ;
+           
+        }
+    
+        #words { 
+            border-width: 10px; 
+            background-color: white;
+            border-color: rgb(249, 114, 136);
+            border-style:ridge;
+            padding: 30px; 
+            margin-left:330px; 
+            width: 50%;
+            font-family:fantasy;
+            font-weight:bold;
+            font-size:20px;
+        }
+        #submit-button, #reset-button{
+            background-color: rgb(249, 114, 136);
+            font-size:15px;
+            border-radius: 10px;
+            padding:10px;
+        }
+    </style> 
+	<h1>Remove All Jokes</h1>
+    <div id="words">
+    <form action="http://localhost:<%= port %>/removeAllJokesconfirm" method="post">
+    <div id = "display">
+    Remove jokes
+    <br> <br>
+	<input type="submit" id = "submit-button"Remove All jokes" onclick = "myAlert()"/></div>
+</div>
+	<hr>
+    <a href = "/">HOME</a>
+    
+</form>
+
+</body>
+<script>
+    function myAlert() {
+        alert("Are you sure you want to remove all jokes?");
+        
+    }
+</script>
+
+</html>

@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Basic HTML5 Document">
+    <meta name="keywords" content="HTML5, Responsive"> <!-- for search engine optimization (SEO) -->
+	<title>Submit</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            background-position: center;
+           font-family:Verdana, Geneva, Tahoma, sans-serif ;
+           
+        }
+    
+        #words { 
+            border-width: 10px; 
+            background-color: white;
+            border-color: rgb(249, 114, 136);
+            border-style:ridge;
+            padding: 30px; 
+            margin-left:330px; 
+            width: 50%;
+            font-family:fantasy;
+            font-weight:bold;
+            font-size:20px;
+        }
+    </style> 
+    <h1>Jokes for <%= form.name %></h1>
+    <% if (form.type === "random") { %>
+        <p>You requested <%= form.amt %> jokes of type <%= form.type %>.</p>
+        
+    <% } else { %>
+        <p>You requested jokes of type <%= form.type %>.</p>
+    <% } %>
+    <% form.jokes.forEach(joke => { %>
+
+          <p><strong>Setup:</strong> <%= joke.setup %></p>
+          <p><strong>Punchline:</strong> <%= joke.punchline %></p>
+   
+      <% }); %>
+    
+<hr>
+
+<a href = "/">HOME</a>
+</body>
+<script>
+   
+    function myAlert() {
+        return confirm("Are you sure you want to submit your application?\nYou will not be able to change your information once submitted.")
+    }
+</script>
+</html>

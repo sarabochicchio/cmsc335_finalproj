@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Basic HTML5 Document">
+    <meta name="keywords" content="HTML5, Responsive"> <!-- for search engine optimization (SEO) -->
+	<title>Jokes</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            background-position: center;
+           font-family:Verdana, Geneva, Tahoma, sans-serif ;
+          
+        }
+    
+       
+        table{
+            margin-left:190px; 
+            background-color:white;
+            border-color:rgb(249, 114, 136);
+            border-collapse: collapse;
+            text-align: center;
+            
+           
+            
+        }
+       
+        th {
+            background-color:rgb(249, 114, 136);
+        }
+    </style> 
+	<h1>Past jokes</h1>
+    
+    <%- jokesselected %>
+
+<br>
+    <a href = "/">HOME</a>
+</body>
+
+</html>
