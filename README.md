@@ -4,7 +4,7 @@ Group Members: Sara Bochicchio (sbochicc), Devina Munjal (dmunjal), Neha Rathnav
 
 App Description: Allows users to request types of jokes or a certain number of random jokes and stores the results
 
-YouTube Video Link: 
+YouTube Video Link: [https://youtu.be/sZLlrITUv0w]
 
 APIs: Official_Joke_API [https://github.com/15Dkatz/official_joke_api]
 
